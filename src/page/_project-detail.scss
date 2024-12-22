@@ -1,0 +1,125 @@
+@use '../setting/index' as s;
+
+
+.sub.project-detail {
+  font-size: 1.6rem;
+
+  .mv {
+    .text-wrap {
+      .text::before {
+        content: "PROJECT";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        transform: translateY(-5px);
+        @include s.white-text;
+      }
+    }
+  }
+
+  .construction-detail {
+    background: url(./../../images/section-bg.jpg) no-repeat center/cover;
+  }
+
+  .construction-wrap {
+    .category-wrap {
+      color: s.$text-white;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 24px;
+
+      p {
+        display: inline-block;
+        padding: 3px 16px;
+        background-color: s.$blue;
+      }
+    }
+
+    .location {
+      margin-bottom: 88px;
+
+      @media screen and (max-width:1023px) {
+        margin-bottom: 40px;
+        font-size: 1rem;
+      }
+    }
+
+    h4 {
+      font-size: 4.5rem;
+      margin-bottom: 48px;
+
+      @media screen and (max-width:767px) {
+        font-size: 2.7rem;
+        margin-bottom: 24px;
+      }
+    }
+
+    .image {
+      aspect-ratio: 16/9;
+      margin-bottom: 56px;
+
+      @media screen and (max-width:1023px) {
+        margin-bottom: 32px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .back {
+      color: s.$blue;
+      width: fit-content;
+      margin: 0 auto;
+
+      a {
+        position: relative;
+      }
+
+      span {
+        display: inline-block;
+        width: 32px;
+        height: 2px;
+        background-color: s.$blue;
+        position: absolute;
+        top: 50%;
+        left: -50%;
+        transform: translateY(-50%);
+      }
+
+      span::before,
+      span::after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 2px;
+        background-color: s.$blue;
+        position: absolute;
+      }
+
+      span::before {
+        top: 3px;
+        left: -2px;
+        transform: rotate(45deg);
+      }
+
+      span::after {
+        top: -3px;
+        left: -2px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    .text {
+      margin-bottom: 72px;
+    }
+  }
+
+  .contact {
+    padding-top: 0;
+  }
+}

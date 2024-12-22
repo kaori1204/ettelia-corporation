@@ -1,0 +1,173 @@
+@use '../setting/index' as s;
+
+.service {
+
+  .mv {
+    .text-wrap {
+      .text:first-of-type::before {
+        content: "SERVICE";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        transform: translateY(-5px);
+        @include s.white-text;
+      }
+    }
+  }
+
+  .business-content {
+    background: url(./../../images/section-bg.jpg) no-repeat center/cover;
+
+    .business-content__list {
+      .business-content__list-item:not(:last-of-type) {
+        margin-bottom: 112px;
+
+        @media screen and (max-width:1023px) {
+          margin-bottom: 80px;
+        }
+
+        @media screen and (max-width:767px) {
+          margin-bottom: 40px;
+        }
+      }
+
+      .business-content__list-item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 32px 0;
+        border: 1px solid;
+        border-image: linear-gradient(to bottom, #56CCF2, #0B439A) 1;
+
+        @media screen and (max-width:1023px) {
+          padding: 24px 0;
+        }
+
+        .item {
+          width: calc(100% / 2);
+
+          @media screen and (max-width:767px) {
+            width: 100%;
+          }
+        }
+
+        .text {
+          font-size: 1.6rem;
+          padding: 0 48px;
+
+          @media screen and (max-width:1023px) {
+            padding: 0 24px;
+          }
+
+          @media screen and (max-width:767px) {
+            font-size: 1.4rem;
+          }
+
+          .title-wrap {
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 24px;
+
+            @media screen and (max-width:1023px) {
+              margin-bottom: 16px;
+            }
+
+            .number {
+              font-size: 10rem;
+              font-family: "Oswald", sans-serif;
+              @include s.blue-gradient;
+
+              @media screen and (max-width:1023px) {
+                font-size: 7.5rem;
+              }
+
+              @media screen and (max-width:767px) {
+                font-size: 6rem;
+              }
+            }
+
+            .title {
+              color: s.$text-blue;
+              font-size: 2.2rem;
+
+              @media screen and (max-width:1023px) {
+                font-size: 1.7rem;
+              }
+
+              @media screen and (max-width:767px) {
+                font-size: 1.6rem;
+              }
+
+              span {
+                display: block;
+                font-size: 4.5rem;
+
+                @media screen and (max-width:1023px) {
+                  font-size: 2.9rem;
+                }
+
+                @media screen and (max-width:767px) {
+                  font-size: 2.5rem;
+                }
+              }
+            }
+          }
+
+          p:first-of-type {
+            margin-bottom: 24px;
+          }
+
+          .more-btn {
+            margin-left: auto;
+          }
+        }
+
+        .image {
+          overflow: hidden;
+          padding: 32px 0;
+
+          @media screen and (max-width:767px) {
+            display: none;
+          }
+
+          img {
+            width: 67%;
+            aspect-ratio: 1/1;
+            object-fit: contain;
+            margin: 0 auto;
+            min-width: 264px;
+          }
+        }
+      }
+    }
+
+    .business-content__list-item:nth-of-type(4),
+    .business-content__list-item:nth-of-type(5) {
+      .image {
+        img {
+          width: 40%;
+        }
+      }
+    }
+
+    .business-content__list-item:nth-of-type(2) {
+      .image {
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .business-content__list-item:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .contact {
+    padding-top: 0;
+  }
+}

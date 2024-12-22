@@ -1,0 +1,910 @@
+@use '../setting/index' as s;
+
+// 初期設定
+html {
+  font-size: 62.5%;
+  font-family: "Noto Sans JP", sans-serif;
+  color: s.$text-black-base;
+}
+
+
+// セクション幅
+section:not(.mv) {
+  padding: 106px 0;
+
+  @media screen and (max-width:1023px) {
+    padding: 72px 0;
+  }
+
+  @media screen and (max-width:767px) {
+    padding: 48px 0;
+  }
+}
+
+.section-inner {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.content-inner {
+  max-width: 1224px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+// MV
+.mv {
+  width: 100%;
+  height: 840px;
+  overflow: hidden;
+  position: relative;
+
+  @media screen and (max-width:1023px) {
+    height: 728px;
+  }
+
+  @media screen and (max-width:767px) {
+    height: 432px;
+  }
+
+  .mv-inner {
+    background: url(./../../images/mv-bg.jpg) no-repeat center/cover;
+    height: 808px;
+    padding: 24px 64px;
+
+    @media screen and (max-width:1023px) {
+      height: 696px;
+      padding: 24px 40px;
+    }
+
+    @media screen and (max-width:767px) {
+      padding: 8px 16px;
+      height: 400px;
+      position: relative;
+    }
+  }
+
+  .mv__image-list {
+    width: 72%;
+    height: 800px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 32px;
+    position: absolute;
+    top: 40px;
+    right: -12%;
+
+    @media screen and (max-width:1465px) {
+      right: -20%;
+      width: 80%;
+    }
+
+    @media screen and (max-width:1023px) {
+      right: -18%;
+    }
+
+    @media screen and (max-width:767px) {
+      top: 0;
+      right: -11%;
+    }
+
+    .mv__image-list-item {
+      transform: skewX(-25deg);
+
+      .image-wrap {
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transform: skewX(25deg) scale(1.8);
+
+          @media screen and (max-width:1465px) {
+            transform: skewX(25deg) scale(2);
+          }
+
+          @media screen and (max-width:1180px) {
+            transform: skewX(25deg) scale(2.2);
+          }
+
+          @media screen and (max-width:1023px) {
+            transform: skewX(25deg) scale(2.4);
+          }
+        }
+      }
+    }
+  }
+
+  .text-wrap {
+    margin-top: 48px;
+
+    @media screen and (max-width:1023px) {
+      margin-top: 56px;
+    }
+
+    @media screen and (max-width:767px) {
+      margin-top: 32px;
+    }
+  }
+
+  .text {
+    @include s.blue-gradient;
+    font-family: "Oswald", sans-serif;
+    font-size: 8.5rem;
+    position: relative;
+    z-index: 2;
+
+    @media screen and (max-width:1023px) {
+      font-size: 6rem;
+    }
+
+    @media screen and (max-width:767px) {
+      font-size: 4rem;
+    }
+
+    span {
+      display: inline-block;
+    }
+  }
+
+
+  .text-02 {
+    width: fit-content;
+    color: s.$text-white;
+    font-size: 2.2rem;
+    margin-top: 40px;
+    text-align: end;
+    position: relative;
+    z-index: 2;
+    padding-left: 150px;
+
+    @media screen and (max-width:1730px) {
+      text-shadow: 0 2px 2px rgb(51, 51, 51, 0.5);
+    }
+
+    @media screen and (max-width:1023px) {
+      margin-top: 48px;
+    }
+
+    @media screen and (max-width:767px) {
+      margin-top: 24px;
+      padding-left: 0;
+      width: 100%;
+      font-size: 1.5rem;
+      text-align: start;
+      padding-left: 8px;
+    }
+  }
+
+  .text-02::before {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 2px;
+    background-color: s.$white;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+
+    @media screen and (max-width:767px) {
+      display: none;
+    }
+  }
+}
+
+// ロゴ
+.logo {
+  font-family: "Oswald", sans-serif;
+  width: fit-content;
+  font-size: 1.8rem;
+
+  @media screen and (max-width:767px) {
+    font-size: 1.2rem;
+    width: 60%;
+  }
+
+  .logo-wrap {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @media screen and (max-width:767px) {
+      width: 100%;
+    }
+
+    span {
+      display: block;
+      font-size: 3rem;
+
+      @media screen and (max-width:767px) {
+        font-size: 1.6rem;
+      }
+    }
+
+    img {
+      width: 23%;
+
+      @media screen and (max-width:1023px) {
+        width: 16%;
+      }
+    }
+  }
+}
+
+// セクションタイトル
+h2 {
+  font-size: 8rem;
+  display: inline-block;
+  color: s.$text-blue;
+  margin-bottom: 48px;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+
+  @media screen and (max-width:1023px) {
+    font-size: 6.5rem;
+  }
+
+  @media screen and (max-width:767px) {
+    font-size: 4.8rem;
+    margin-bottom: 40px;
+  }
+
+
+  span {
+    display: block;
+    font-size: 1.6rem;
+    @include s.blue-gradient;
+  }
+}
+
+h3 {
+  font-size: 3rem;
+
+  @media screen and (max-width:767px) {
+    font-size: 2.4rem;
+  }
+}
+
+h4 {
+  font-size: 2.2rem;
+  @include s.blue-gradient;
+  margin-bottom: 16px;
+}
+
+// Moreボタン
+.more-btn {
+  a {
+    font-size: 2rem;
+    font-family: "Oswald", sans-serif;
+    color: s.$text-white;
+    padding: 8px 32px;
+    @include s.bg-blue-gradient;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    span {
+      display: inline-block;
+      width: 32px;
+      height: 1px;
+      background-color: s.$white;
+      position: relative;
+    }
+
+    span::before {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 1px;
+      background-color: s.$white;
+      position: absolute;
+      top: -2px;
+      right: 0;
+      transform: rotate(45deg);
+    }
+
+    span::after {
+      content: "";
+      display: inline-block;
+      width: 5px;
+      height: 1px;
+      background-color: s.$white;
+      position: absolute;
+      top: 2px;
+      right: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+// CONTACT
+.top {
+  .contact {
+    padding-top: 0;
+  }
+}
+
+.contact {
+  color: s.$text-white;
+
+  .content-inner {
+    @include s.bg-blue-gradient;
+    padding: 106px 0;
+
+    @media screen and (max-width:767px) {
+      padding: 64px 0;
+    }
+  }
+
+  .content-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 32px;
+    padding: 0 24px;
+
+    @media screen and (max-width:767px) {
+      text-align: center;
+      gap: 16px;
+    }
+
+    .item {
+      width: calc((100% - 32px)/ 2);
+
+      @media screen and (max-width:767px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .contact-text {
+    font-size: 3rem;
+    text-align: center;
+
+    @media screen and (max-width:1023px) {
+      font-size: 2.2rem;
+    }
+
+    @media screen and (max-width:767px) {
+      margin-bottom: 24px;
+    }
+
+    p:first-of-type {
+      margin-bottom: 24px;
+
+      @media screen and (max-width:767px) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .address {
+    .reception {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    a:first-of-type {
+      @media screen and (max-width:767px) {
+        margin-bottom: 16px;
+      }
+    }
+
+    .tel {
+      font-size: 6rem;
+      font-family: "Oswald", sans-serif;
+
+      @media screen and (max-width:1023px) {
+        font-size: 5.5rem;
+      }
+
+      @media screen and (max-width:767px) {
+        font-size: 4.5rem;
+      }
+    }
+
+    .contact-btn {
+      width: 80%;
+
+      @media screen and (max-width:1023px) {
+        width: 90%;
+      }
+
+      @media screen and (max-width:767px) {
+        margin: 0 auto;
+      }
+
+      a {
+        font-size: 2.2rem;
+        padding: 16px 72px;
+        border: 1px solid s.$white;
+        position: relative;
+
+        @media screen and (max-width:1023px) {
+          padding: 24px 16px;
+        }
+
+        @media screen and (max-width:767px) {
+          padding: 8px 16px;
+          font-size: 1.8rem;
+        }
+      }
+
+      span {
+        width: 32px;
+        height: 1px;
+        background-color: s.$white;
+        position: absolute;
+        top: 50%;
+        right: 15%;
+        transform: translateY(-50%);
+
+        @media screen and (max-width:767px) {
+          display: none;
+        }
+      }
+
+      span::before,
+      span::after {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 1px;
+        background-color: s.$white;
+        position: absolute;
+      }
+
+      span::before {
+        top: -2px;
+        right: 0;
+        transform: rotate(45deg);
+      }
+
+      span::after {
+        top: 2px;
+        right: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+// フッターナビゲーション
+.footer-navigation {
+  background: url(./../../images/footer-bg.jpg) no-repeat center/cover;
+  color: s.$text-white;
+  font-size: 1.6rem;
+
+  h1 {
+    margin-bottom: 32px;
+
+    @media screen and (max-width:1023px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  address {
+    margin-bottom: 88px;
+
+    @media screen and (max-width:1023px) {
+      margin-bottom: 48px;
+    }
+
+    @media screen and (max-width:767px) {
+      margin-bottom: 0;
+    }
+
+    .residence {
+      margin-bottom: 48px;
+
+      @media screen and (max-width:1023px) {
+        margin-bottom: 24px;
+      }
+    }
+
+    .tel,
+    .fax {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+
+      .title {
+        font-family: "B612 Mono", monospace;
+        font-style: italic;
+        padding: 8px 16px;
+        background-color: s.$white;
+        color: s.$text-blue;
+      }
+
+      p:last-of-type {
+        font-size: 3rem;
+        font-family: "Oswald", sans-serif;
+
+        @media screen and (max-width:1023px) {
+          font-size: 2.5rem;
+        }
+
+        @media screen and (max-width:767px) {
+          font-size: 2.2rem;
+        }
+
+        span {
+          font-size: 1.6rem;
+          font-family: "Noto Sans JP", sans-serif;
+
+          @media screen and (max-width:1023px) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    .tel {
+      margin-bottom: 16px;
+
+      a {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        @media screen and (max-width:1023px) {
+          gap: 8px;
+        }
+      }
+    }
+  }
+
+  .company {
+    .youtube {
+      display: none;
+
+      @media screen and (max-width:767px) {
+        display: block;
+        margin-left: 0;
+        width: 40%;
+      }
+    }
+
+    .fax {
+      margin-bottom: 32px;
+    }
+  }
+
+  .contact-btn {
+    color: s.$text-blue;
+    font-family: "Oswald", serif;
+
+    @media screen and (max-width:767px) {
+      display: none;
+    }
+
+    a {
+      display: block;
+      padding: 8px 32px;
+      background-color: s.$white;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+
+      span {
+        display: inline-block;
+        width: 32px;
+        height: 1px;
+        background-color: s.$text-blue;
+        position: relative;
+      }
+
+      span::before,
+      span::after {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 1px;
+        background-color: s.$blue;
+        position: absolute;
+      }
+
+      span::before {
+        top: -2px;
+        right: 0;
+        transform: rotate(45deg);
+      }
+
+      span::after {
+        top: 2px;
+        right: 0;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .content-inner {
+    display: flex;
+
+    .item {
+      width: calc(100% / 2);
+
+      @media screen and (max-width:767px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .footer-menu {
+    @media screen and (max-width:767px) {
+      display: none;
+    }
+  }
+
+  .footer-menu_list {
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    gap: 16px;
+    font-size: 2.2rem;
+    font-family: "Oswald", sans-serif;
+    padding-bottom: 56px;
+
+    @media screen and (max-width:1023px) {
+      width: 60%;
+      padding-bottom: 40px;
+    }
+
+    .footer-menu__list-item {
+      width: calc((100% - 16px)/ 2);
+      padding: 8px 16px;
+    }
+  }
+
+  .youtube {
+    width: 40%;
+    margin-left: auto;
+
+    @media screen and (max-width:1023px) {
+      width: 60%;
+    }
+  }
+}
+
+// フッター
+footer {
+  text-align: center;
+  font-size: 1.6rem;
+  background-color: s.$footer-blue;
+  color: s.$text-white;
+  font-family: "Oswald", sans-serif;
+
+  small {
+    display: block;
+    padding: 8px 0;
+  }
+}
+
+.pc-navigation {
+  padding: 0 24px;
+
+  @media screen and (max-width:767px) {
+    display: none;
+  }
+
+  .pc-navigation__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 1.6rem;
+    gap: 24px;
+
+    @media screen and (max-width:1023px) {
+      font-size: 1.4rem;
+    }
+
+    // ナビゲーション(PC)
+    .pc-navigation__list-item {
+      width: calc((100% - 24px * 5)/ 6);
+
+      a {
+        padding: 24px 0;
+
+        span {
+          display: block;
+          padding-top: 8px;
+          color: s.$text-blue;
+        }
+      }
+    }
+  }
+}
+
+// -----------------------------------------------------
+// 下層
+.sub {
+
+  // ヘッダー
+  header {
+    padding: 0 24px;
+
+    // ロゴ
+    .logo {
+      .logo-wrap {
+        span {
+          @media screen and (max-width:1205px) {
+            font-size: 2rem;
+          }
+
+          @media screen and (max-width:767px) {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+
+  // ヘッダーメニュー(PC)
+  .header.pc {
+    @media screen and (max-width:1023px) {
+      display: none;
+    }
+
+    .header-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .pc-navigation {
+        width: 70%;
+        padding: 0;
+        justify-content: space-between;
+
+        @media screen and (max-width:1205px) {
+          width: 100%;
+        }
+
+        .pc-navigation__list {
+          gap: 16px;
+
+          @media screen and (max-width:1033px) {
+            gap: 8px;
+          }
+
+          .pc-navigation__list-item {
+            width: calc((100% - 16px * 5)/ 6);
+
+            @media screen and (max-width:1033px) {
+              width: calc((100% - 8px * 5)/ 6);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // ヘッダーメニュー(PC)
+  .header.sp {
+    display: none;
+
+    @media screen and (max-width:1023px) {
+      display: block;
+      position: static;
+      background-color: s.$white;
+    }
+
+    .header-wrap {
+      padding: 8px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      .logo-wrap {
+        p {
+          @media screen and (max-width:1023px) {
+            font-size: 1.6rem;
+          }
+
+          @media screen and (max-width:767px) {
+            font-size: 1.2rem;
+          }
+        }
+
+        img {
+          width: 20%;
+        }
+      }
+    }
+
+    .hamburger-btn {
+      .hamburger-btn__bar {
+        background-color: s.$text-black-base;
+      }
+    }
+
+    .hamburger-btn--open {
+      transition: .5s;
+
+      .hamburger-btn__bar {
+        background-color: s.$white;
+      }
+    }
+  }
+
+  // MV
+  .mv {
+    .mv-inner {
+      display: flex;
+      align-items: center;
+
+      .text-wrap {
+        padding-left: 64px;
+        margin: 0;
+
+        @media screen and (max-width:767px) {
+          padding-left: 24px;
+        }
+
+        .text-02 {
+          margin: 24px 0 0 104px;
+          padding-left: 120px;
+          position: relative;
+
+          @media screen and (max-width:767px) {
+            margin: 24px 0 0 0;
+          }
+        }
+
+        .text-02::before {
+          @media screen and (max-width:767px) {
+            display: block;
+            left: 15%;
+          }
+        }
+      }
+    }
+
+    .mv__image-list {
+      width: 70%;
+
+      @media screen and (max-width:1023px) {
+        width: 80%;
+        right: -21%;
+      }
+
+      @media screen and (max-width:767px) {
+        width: 100%;
+        right: -40%;
+      }
+
+      .mv__image-list-item {
+        width: 100%;
+
+        @media screen and (max-width:1023px) {
+          height: 688px;
+        }
+
+        @media screen and (max-width:767px) {
+          height: 456px;
+        }
+
+        .image-wrap {
+          img {
+            transform: skewX(25deg) scale(1.1) translateX(-20%);
+
+            @media screen and (max-width:767px) {
+              transform: skewX(25deg) scale(1) translateX(-38%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

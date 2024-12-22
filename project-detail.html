@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
+  <title>ETTELIA株式会社</title>
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
+  <!-- css -->
+  <link rel="stylesheet" href="./dist/css/reset.css">
+  <link rel="stylesheet" href="./dist/css/styles.css">
+  <!-- ハンバーガーメニュー(jquery) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
+  <script src="./dist/js/hamburger-menu.js" defer></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+  <script src="./dist/js/swiper.js" defer></script>
+  <script src="./dist/js/select.js" defer></script>
+</head>
+
+<body class="project-detail sub">
+  <!-- ヘッダー(PC) -->
+  <header class="header pc">
+    <div class="header-wrap">
+      <!-- ロゴ -->
+      <h1 class="logo pc">
+        <a href="index.html">
+          <div class="logo-wrap">
+            <img src="./images/logo.png" alt="ETTELIA株式会社">
+            <p>ETELLIA Co.,Ltd.<span>株式会社ETELLIA</span></p>
+          </div>
+        </a>
+      </h1>
+
+      <!-- ナビゲーション(PC) -->
+      <nav class="pc-navigation">
+        <ul class="pc-navigation__list">
+          <li class="pc-navigation__list-item">
+            <a href="index.html">
+              ホーム<span>HOME</span>
+            </a>
+          </li>
+          <li class="pc-navigation__list-item">
+            <a href="about.html">
+              私たちについて<span>ABOUT</span>
+            </a>
+          </li>
+          <li class="pc-navigation__list-item">
+            <a href="project.html">
+              事例紹介<span>PROJECT</span>
+            </a>
+          </li>
+          <li class="pc-navigation__list-item">
+            <a href="service.html">
+              事業内容<span>SERVICE</span>
+            </a>
+          </li>
+          <li class="pc-navigation__list-item">
+            <a href="news.html">
+              新着情報<span>NEWS</span>
+            </a>
+          </li>
+          <li class="pc-navigation__list-item">
+            <a href="contact.html">
+              お問い合わせ<span>CONTACT</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <header class="header sp">
+    <div class="header-wrap">
+      <!-- ロゴ -->
+      <h1 class="logo">
+        <a href="index.html">
+          <div class="logo-wrap">
+            <img src="./images/logo.png" alt="ETTELIA株式会社">
+            <p>ETELLIA Co.,Ltd.<span>株式会社ETELLIA</span></p>
+          </div>
+        </a>
+      </h1>
+
+      <!-- ハンバーガーメニューボタン -->
+      <button class="hamburger-btn" id="js-hamburger-btn">
+        <span class="hamburger-btn__bar"></span>
+        <span class="hamburger-btn__bar"></span>
+        <span class="hamburger-btn__bar"></span>
+      </button>
+
+      <!-- ナビゲーション(SP) -->
+      <nav class="navigation">
+        <ul class="sp-navigation__list">
+          <li class="sp-navigation__list-item">
+            <a href="index.html" class="navigation-link">
+              ホーム<span>HOME</span>
+            </a>
+          </li>
+          <li class="sp-navigation__list-item">
+            <a href="about.html" class="navigation-link">
+              私たちについて<span>ABOUT</span>
+            </a>
+          </li>
+          <li class="sp-navigation__list-item">
+            <a href="project.html" class="navigation-link">
+              事例紹介<span>PROJECT</span>
+            </a>
+          </li>
+          <li class="sp-navigation__list-item">
+            <a href="#" class="navigation-link">
+              事業内容<span>SERVICE</span>
+            </a>
+          </li>
+          <li class="sp-navigation__list-item">
+            <a href="#" class="navigation-link">
+              新着情報<span>NEWS</span>
+            </a>
+          </li>
+          <li class="sp-navigation__list-item">
+            <a href="#" class="navigation-link">
+              お問い合わせ<span>CONTACT</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- ------------------------------------------------------------- -->
+  <main>
+    <!-- MV -->
+    <section class="mv">
+      <div class="mv-inner">
+        <div class="text-wrap">
+          <p class="text">PROJECT</p>
+          <p class="text-02">施工事例</p>
+        </div>
+      </div>
+      <div class="mv__image-list">
+        <div class="mv__image-list-item">
+          <div class="image-wrap">
+            <img src="./images/mv-project.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 施工事例詳細 -->
+    <section class="construction-detail">
+      <div class="section-inner">
+        <div class="content-inner">
+          <div class="construction-wrap">
+            <div class="category-wrap">
+              <p>彩光システム</p>
+              <p>風力発電</p>
+            </div>
+            <p class="location">
+              導入場所：北海道、沖縄、和歌山、石川、島根&emsp;他全国に多数あり
+            </p>
+            <h4>太陽光吸収パネル - soleil -</h4>
+            <div class="image">
+              <img src="./images/top-project-image02.jpg" alt="">
+            </div>
+            <p class="text">
+              風の抵抗を最小限に抑えた流線形のフォルムが特徴のhalcón。<br>
+              少しの風で回ることができ、安定してエネルギーを生産できます。米だってパシフィック辺のように見え、その手首にぶっつかって船が沈みましてね、おいおい、そこ、つるはしはよしたまえ。もとの丘の草もしずかにそよぎ、ジョバンニのうしろには三本の脚のついた岩が、まるで運動場のように通りや店の中を通って、それからもう咽喉いっぱい泣きだしました。そのとき汽車はだんだん川からはなれていました。ぼく、おおねえさんのとこへ持って来たのです。実験してみるともうはっきりとそれを言うよ。米だってパシフィック辺のように見え、その手首にぶっつかって船が沈みましてね、おいおい、そこ、つるはしはよしたまえ。もとの丘の草もしずかにそよぎ、ジョバンニのうしろには三本の脚のついた岩が、まるで運動場のように通りや店の中を通って、それからもう咽喉いっぱい泣きだしました。そのとき汽車はだんだん川からはなれていました。ぼく、おおねえさんのとこへ持って来たのです。実験してみるともうはっきりとそれを言うよ。
+            </p>
+            <div class="back">
+              <a href="service.html">
+                <span></span>前のページに戻る
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CONTACT -->
+    <section class="contact">
+      <div class="section-inner">
+        <div class="content-inner">
+          <div class="content-wrap">
+            <div class="contact-text item">
+              <p>お見積りだけでも構いません</p>
+              <p>お気軽にお問合せください</p>
+            </div>
+            <div class="address item">
+              <p class="reception">
+                受付時間　平日 10:00 〜 17：00
+              </p>
+              <a href="tel:03-1111-1111" class="tel">03-1111-1111</a>
+              <button class="contact-btn">
+                <a href="contact.html">
+                  お問合せフォーム
+                  <span></span>
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- フッターナビゲーション -->
+    <section class="footer-navigation">
+      <div class="section-inner">
+        <div class="content-inner">
+          <div class="company item">
+            <!-- ロゴ -->
+            <h1 class="logo pc">
+              <a href="index.html">
+                <div class="logo-wrap">
+                  <img src="./images/logo.png" alt="ETTELIA株式会社">
+                  <p>ETELLIA Co.,Ltd.<span>株式会社ETELLIA</span></p>
+                </div>
+              </a>
+            </h1>
+            <address>
+              <p class="residence">〒132-0033 &emsp;東京都練馬区羽沢</p>
+              <div class="tel">
+                <p class="title">TEL</p>
+                <p>
+                  <a href="tel:03-1111-1111">
+                    03-1111-1111
+                    <span>（平日 10:00 〜 17：00）</span>
+                  </a>
+                </p>
+              </div>
+              <div class="fax">
+                <p class="title">FAX</p>
+                <p>
+                  <a href="#">03-1111-1111</a>
+                </p>
+              </div>
+              <div class="youtube">
+                <a href="#">
+                  <img src="./images/footer-icon-youtube.png" alt="youtube">
+                </a>
+              </div>
+            </address>
+
+            <button class="contact-btn">
+              <a href="#">
+                CONTACT
+                <span class="arrow"></span>
+              </a>
+            </button>
+          </div>
+
+          <nav class="footer-menu item">
+            <ul class="footer-menu_list">
+              <li class="footer-menu__list-item">
+                <a href="index.html">HOME</a>
+              </li>
+              <li class="footer-menu__list-item">
+                <a href="service.html">SERVICE</a>
+              </li>
+              <li class="footer-menu__list-item">
+                <a href="about.html">ABOUT</a>
+              </li>
+              <li class="footer-menu__list-item">
+                <a href="news.html">NEWS</a>
+              </li>
+              <li class="footer-menu__list-item">
+                <a href="project.html">PROJECT</a>
+              </li>
+              <li class="footer-menu__list-item">
+                <a href="contact.html">CONTACT</a>
+              </li>
+            </ul>
+            <div class="youtube">
+              <a href="#">
+                <img src="./images/footer-icon-youtube.png" alt="youtube">
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+      </div>
+    </section>
+  </main>
+  <!-- ------------------------------------------------------------- -->
+
+
+  <!-- フッター -->
+  <footer class="footer">
+    <small>&copy;2023 EETELLIA Co.,Ltd.</small>
+  </footer>
+</body>
+
+</html>

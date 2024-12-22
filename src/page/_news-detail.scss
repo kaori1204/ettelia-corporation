@@ -1,0 +1,122 @@
+@use '../setting/index' as s;
+
+.news-detail.sub {
+  .mv {
+    .text-wrap {
+      .text:first-of-type::before {
+        content: "NEWS";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        transform: translateY(-5px);
+        @include s.white-text;
+      }
+    }
+
+    .mv__image-list-item {
+      .image-wrap {
+        img {
+          transform: skewX(25deg) scale(1.1) translateX(-8%);
+        }
+      }
+    }
+  }
+
+  // 新着情報詳細
+  .news-detail__content {
+    background: url(./../../images/section-bg.jpg) no-repeat center/cover;
+    font-size: 1.6rem;
+
+    .title {
+      margin-bottom: 64px;
+
+      @media screen and (max-width:767px) {
+        margin-bottom: 48px;
+      }
+
+      .date {
+        margin-bottom: 16px;
+      }
+
+      .attention-categry {
+        display: inline-block;
+        padding: 0 24px;
+        text-align: center;
+        color: s.$text-white;
+        @include s.bg-blue-gradient;
+        margin-bottom: 24px;
+
+        @media screen and (max-width:767px) {
+          margin-bottom: 8px;
+        }
+      }
+
+      p {
+        font-size: 3rem;
+
+        @media screen and (max-width:767px) {
+          font-size: 1.9rem;
+        }
+      }
+    }
+
+    .text {
+      margin-bottom: 80px;
+
+      @media screen and (max-width:767px) {
+        font-size: 1.4rem;
+        margin-bottom: 48px;
+      }
+    }
+
+    // 戻るボタン
+    .back {
+      color: s.$blue;
+      width: fit-content;
+      margin: 0 auto;
+
+      a {
+        position: relative;
+      }
+
+      span {
+        display: inline-block;
+        width: 32px;
+        height: 2px;
+        background-color: s.$blue;
+        position: absolute;
+        top: 50%;
+        left: -50%;
+        transform: translateY(-50%);
+      }
+
+      span::before,
+      span::after {
+        content: "";
+        display: block;
+        width: 10px;
+        height: 2px;
+        background-color: s.$blue;
+        position: absolute;
+      }
+
+      span::before {
+        top: 3px;
+        left: -2px;
+        transform: rotate(45deg);
+      }
+
+      span::after {
+        top: -3px;
+        left: -2px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .contact {
+    padding-top: 0;
+  }
+}

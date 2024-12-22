@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0">
+	<title>ETTELIA株式会社</title>
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=B612+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&display=swap"
+		rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" href="./dist/css/reset.css">
+	<link rel="stylesheet" href="./dist/css/styles.css">
+	<!-- ハンバーガーメニュー(jquery) -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" defer></script>
+	<script src="./dist/js/hamburger-menu.js" defer></script>
+	<!-- swiper -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
+	<script src="./dist/js/swiper.js" defer></script>
+</head>
+
+<body class="top">
+	<!-- ヘッダー -->
+	<header class="header">
+
+		<!-- ナビゲーション(SP) -->
+		<nav class="navigation">
+			<ul class="sp-navigation__list">
+				<li class="sp-navigation__list-item">
+					<a href="index.html" class="navigation-link">
+						ホーム<span>HOME</span>
+					</a>
+				</li>
+				<li class="sp-navigation__list-item">
+					<a href="about.html" class="navigation-link">
+						私たちについて<span>ABOUT</span>
+					</a>
+				</li>
+				<li class="sp-navigation__list-item">
+					<a href="project.html" class="navigation-link">
+						事例紹介<span>PROJECT</span>
+					</a>
+				</li>
+				<li class="sp-navigation__list-item">
+					<a href="service.html" class="navigation-link">
+						事業内容<span>SERVICE</span>
+					</a>
+				</li>
+				<li class="sp-navigation__list-item">
+					<a href="news.html" class="navigation-link">
+						新着情報<span>NEWS</span>
+					</a>
+				</li>
+				<li class="sp-navigation__list-item">
+					<a href="contact.html" class="navigation-link">
+						お問い合わせ<span>CONTACT</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+		<!-- MV -->
+		<section class="mv">
+			<div class="mv-inner">
+				<!-- ロゴ -->
+				<h1 class="logo pc">
+					<a href="index.html">
+						<div class="logo-wrap">
+							<img src="./images/logo.png" alt="ETTELIA株式会社">
+							<p>ETELLIA Co.,Ltd.<span>株式会社ETELLIA</span></p>
+						</div>
+					</a>
+				</h1>
+
+				<!-- ハンバーガーメニューボタン -->
+				<div class="sp">
+					<button class="hamburger-btn" id="js-hamburger-btn">
+						<span class="hamburger-btn__bar"></span>
+						<span class="hamburger-btn__bar"></span>
+						<span class="hamburger-btn__bar"></span>
+					</button>
+				</div>
+
+				<div class="text-wrap">
+					<p class="text">
+						Towards an era of renewable
+					</p>
+					<p class="text">
+						energy that utilizes the
+					</p>
+					<p class="text">
+						power of nature
+					</p>
+					<p class="text-02">自然の力を利用した再生可能エネルギーの時代へ</p>
+				</div>
+			</div>
+
+			<ul class="mv__image-list">
+				<li class="mv__image-list-item">
+					<div class="image-wrap">
+						<img src="./images/mv-top-image01.jpg" alt="">
+					</div>
+				</li>
+				<li class="mv__image-list-item">
+					<div class="image-wrap">
+						<img src="./images/mv-top-image02.jpg" alt="">
+					</div>
+				</li>
+			</ul>
+		</section>
+	</header>
+
+	<!-- ナビゲーション(PC) -->
+	<nav class="pc-navigation">
+		<ul class="pc-navigation__list">
+			<li class="pc-navigation__list-item">
+				<a href="index.html">
+					ホーム<span>HOME</span>
+				</a>
+			</li>
+			<li class="pc-navigation__list-item">
+				<a href="about.html">
+					私たちについて<span>ABOUT</span>
+				</a>
+			</li>
+			<li class="pc-navigation__list-item">
+				<a href="project.html">
+					事例紹介<span>PROJECT</span>
+				</a>
+			</li>
+			<li class="pc-navigation__list-item">
+				<a href="service.html">
+					事業内容<span>SERVICE</span>
+				</a>
+			</li>
+			<li class="pc-navigation__list-item">
+				<a href="news.html">
+					新着情報<span>NEWS</span>
+				</a>
+			</li>
+			<li class="pc-navigation__list-item">
+				<a href="contact.html">
+					お問い合わせ<span>CONTACT</span>
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+	<main>
+		<!-- ABOUT -->
+		<section class="about">
+			<div class="section-inner">
+				<div class="content-inner">
+					<ul class="flex-box">
+						<li class="flex-box__text">
+							<h2>ABOUT<span>- 私たちについて -</span></h2>
+							<h3>
+								自然と共存するために<br>
+								自然のエネルギーを活用する
+							</h3>
+							<div class="text-box">
+								<p>
+									太陽の光、水の波、地上で感じる風。<br>
+									これらの自然エネルギーは古くから研究され、<span>活用されてきました。</span><br>
+									私たちは、そんな自然エネルギーを、最先端の技術でより効率的に、より簡単に身近に
+									利用できるように日々研究開発を行なっています。
+								</p>
+								<p>
+									また、パートナー企業との共同開発も積極的に行っております。お互いの強みを活かし、
+									私たちが暮らしやすい、環境に配慮した技術を開発しています。
+								</p>
+								<p>
+									未来のために、私たちの生活を守るために。<br>
+									自然エネルギー開発のパイオニアとして社会貢献できれば嬉しいです。
+								</p>
+							</div>
+							<button class="more-btn">
+								<a href="about.html">VIEW MORE <span></span></a>
+							</button>
+						</li>
+						<li class="flex-box__image">
+							<div class="about-image">
+								<img src="./images/top-about-image01.jpg" alt="">
+							</div>
+							<div class="about-image">
+								<img src="./images/top-about-image02.jpg" alt="">
+							</div>
+							<div class="about-image">
+								<img src="./images/top-about-image03.jpg" alt="">
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<!-- PROJECT -->
+		<section class="project">
+			<h2>PROJECT<span>- 事例紹介 -</span></h2>
+			<!-- スライドショー -->
+			<div class="swiper project__swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="slid-wrap">
+							<a href="project-detail.html">
+								<div class="image">
+									<img src="./images/top-project-image01.jpg" alt="">
+								</div>
+								<div class="explanation">
+									<div class="text-wrap">
+										<h4>電力供給パイプライン <span>- sender -</span></h4>
+										<p>
+											太陽光を吸収しエネルギーに変える新素材soleilで作り出したエネルギーをパイプを通して館内へ送り出すシステムです。
+										</p>
+										<span class="arrow"></span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slid-wrap">
+							<a href="project-detail.html">
+								<div class="image">
+									<img src="./images/top-project-image02.jpg" alt="">
+								</div>
+								<div class="explanation">
+									<div class="text-wrap">
+										<h4>太陽光吸収パネル <span>- soleil -</span></h4>
+										<p>
+											太太陽光を吸収しエネルギーに変える新素材soleil。建物の壁面に設置することで光の反射を最小限にし、効率的にエネルギーに変換します。
+										</p>
+										<span class="arrow"></span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slid-wrap">
+							<a href="project-detail.html">
+								<div class="image">
+									<img src="./images/top-project-image03.jpg" alt="">
+								</div>
+								<div class="explanation">
+									<div class="text-wrap">
+										<h4>海上風力発電 <span>- valser -</span></h4>
+										<p>
+											海上に風力発電装置を設置することで森林伐採など自然への負担を少なくし、人と自然が共存しながらエネルギーを生み出します。
+										</p>
+										<span class="arrow"></span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slid-wrap">
+							<a href="project-detail.html">
+								<div class="image">
+									<img src="./images/top-project-image04.jpg" alt="">
+								</div>
+								<div class="explanation">
+									<div class="text-wrap">
+										<h4>波力発電 <span>- wave -</span></h4>
+										<p>
+											N県とY株式会社との共同開発。ダムの放水時の波力を電力に変換。変換された電力はN県の公共施設の一部で利用されています。
+										</p>
+										<span class="arrow"></span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="slid-wrap">
+							<a href="project-detail.html">
+								<div class="image">
+									<img src="./images/top-project-image05.jpg" alt="">
+								</div>
+								<div class="explanation">
+									<div class="text-wrap">
+										<h4>風力発電ファン <span>- halcón -</span></h4>
+										<p>
+											風の抵抗を最小限に抑えた流線形のフォルムが特徴のhalcón。少しのかぜで回ることができ、安定してエネルギーを生産できます。
+										</p>
+										<span class="arrow"></span>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			</div>
+
+			<button class="more-btn">
+				<a href="project.html">VIEW MORE <span></span></a>
+			</button>
+		</section>
+
+		<!-- SERVICE -->
+		<section class="service">
+			<div class="section-inner">
+				<div class="content-inner">
+					<h2>SERVICE<span>- 事業内容 -</span></h2>
+					<p class="service__explanation-text">私たちは、５つの分野のサービスをご提供しています</p>
+
+					<!-- PCメニューリスト -->
+					<ul class="service__list list01">
+						<li class="service__list-item">
+							<p>01</p>
+							<p>電力の自産自消<span>人力発電</span></p>
+							<div class="image">
+								<img src="./images/service-icon01.png" alt="">
+							</div>
+						</li>
+						<li class="service__list-item">
+							<p>02</p>
+							<p>海の上のエネルギー<span>波力発電</span></p>
+							<div class="image">
+								<img src="./images/service-icon02.png" alt="">
+							</div>
+						</li>
+						<li class="service__list-item">
+							<p>03</p>
+							<p>思い通りの波を作る<span>造波装置</span></p>
+							<div class="image">
+								<img src="./images/service-icon03.png" alt="">
+							</div>
+						</li>
+					</ul>
+
+					<ul class="service__list list02">
+						<li class="service__list-item">
+							<p>04</p>
+							<p>全ての空間に自然光を<span>彩光システム</span></p>
+							<div class="image">
+								<img src="./images/service-icon04.png" alt="">
+							</div>
+						</li>
+						<li class="service__list-item">
+							<p>05</p>
+							<p>もっと豊な生活のために<span>ロボティックス</span></p>
+							<div class="image">
+								<img src="./images/service-icon05.png" alt="">
+							</div>
+						</li>
+					</ul>
+
+					<!-- SPメニューリスト -->
+					<ul class="sp-service__list">
+						<li class="sp-service__list-item">
+							<p>01</p>
+							<p>電力の自産自消<span>人力発電</span></p>
+							<div class="image">
+								<img src="./images/service-icon01.png" alt="">
+							</div>
+						</li>
+						<li class="sp-service__list-item">
+							<p>02</p>
+							<p>海の上のエネルギー<span>波力発電</span></p>
+							<div class="image">
+								<img src="./images/service-icon02.png" alt="">
+							</div>
+						</li>
+						<li class="sp-service__list-item">
+							<p>03</p>
+							<p>思い通りの波を作る<span>造波装置</span></p>
+							<div class="image">
+								<img src="./images/service-icon03.png" alt="">
+							</div>
+						</li>
+						<li class="sp-service__list-item">
+							<p>04</p>
+							<p>全ての空間に自然光を<span>彩光システム</span></p>
+							<div class="image">
+								<img src="./images/service-icon04.png" alt="">
+							</div>
+						</li>
+						<li class="sp-service__list-item">
+							<p>05</p>
+							<p>もっと豊な生活のために<span>ロボティックス</span></p>
+							<div class="image">
+								<img src="./images/service-icon05.png" alt="">
+							</div>
+						</li>
+					</ul>
+					<button class="more-btn">
+						<a href="service.html">VIEW MORE <span></span></a>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<section class="news">
+			<div class="section-inner">
+				<div class="content-inner">
+					<h2>NEWS<span>- 新着情報 -</span></h2>
+					<ul class="news__list">
+						<li class="news__list-item">
+							<a href="news-detail.html">
+								<div class="data-wrap">
+									<p class="data">
+										<data>2023.06.30</data>
+									</p>
+									<div class="major">NEWS</div>
+								</div>
+								<div class="news-wrap">
+									<div class="title">
+										ホームページをリニューアルしました
+									</div>
+									<div class="news__arrow">
+										<span></span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="news__list-item">
+							<a href="news-detail.html">
+								<div class="data-wrap">
+									<p class="data">
+										<data>2023.06.25</data>
+									</p>
+									<div class="major">NEWS</div>
+								</div>
+								<div class="news-wrap">
+									<div class="title">
+										英語、中国語に対応しました
+									</div>
+									<div class="news__arrow">
+										<span></span>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="news__list-item">
+							<a href="news-detail.html">
+								<div class="data-wrap">
+									<p class="data">
+										<data>2023.06.17</data>
+									</p>
+									<div class="major">column</div>
+								</div>
+								<div class="news-wrap">
+									<div class="title">
+										電力の次自産自消、人力発電とは
+									</div>
+									<div class="news__arrow">
+										<span></span>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<button class="more-btn">
+						<a href="news.html">VIEW MORE <span></span></a>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- CONTACT -->
+		<section class="contact">
+			<div class="section-inner">
+				<div class="content-inner">
+					<div class="content-wrap">
+						<div class="contact-text item">
+							<p>お見積りだけでも構いません</p>
+							<p>お気軽にお問合せください</p>
+						</div>
+						<div class="address item">
+							<p class="reception">
+								受付時間　平日 10:00 〜 17：00
+							</p>
+							<a href="tel:03-1111-1111" class="tel">03-1111-1111</a>
+							<button class="contact-btn">
+								<a href="contact.html">
+									お問合せフォーム
+									<span></span>
+								</a>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- フッターナビゲーション -->
+		<section class="footer-navigation">
+			<div class="section-inner">
+				<div class="content-inner">
+					<div class="company item">
+						<!-- ロゴ -->
+						<h1 class="logo pc">
+							<a href="index.html">
+								<div class="logo-wrap">
+									<img src="./images/logo.png" alt="ETTELIA株式会社">
+									<p>ETELLIA Co.,Ltd.<span>株式会社ETELLIA</span></p>
+								</div>
+							</a>
+						</h1>
+						<address>
+							<p class="residence">〒132-0033 &emsp;東京都練馬区羽沢</p>
+							<div class="tel">
+								<p class="title">TEL</p>
+								<p>
+									<a href="tel:03-1111-1111">
+										03-1111-1111
+										<span>（平日 10:00 〜 17：00）</span>
+									</a>
+								</p>
+							</div>
+							<div class="fax">
+								<p class="title">FAX</p>
+								<p>
+									<a href="tel:03-1111-1111">03-1111-1111</a>
+								</p>
+							</div>
+							<div class="youtube">
+								<a href="#">
+									<img src="./images/footer-icon-youtube.png" alt="youtube">
+								</a>
+							</div>
+						</address>
+
+						<button class="contact-btn">
+							<a href="contact.html">
+								CONTACT
+								<span class="arrow"></span>
+							</a>
+						</button>
+					</div>
+
+					<nav class="footer-menu item">
+						<ul class="footer-menu_list">
+							<li class="footer-menu__list-item">
+								<a href="index.html">HOME</a>
+							</li>
+							<li class="footer-menu__list-item">
+								<a href="service.html">SERVICE</a>
+							</li>
+							<li class="footer-menu__list-item">
+								<a href="about.html">ABOUT</a>
+							</li>
+							<li class="footer-menu__list-item">
+								<a href="news.html">NEWS</a>
+							</li>
+							<li class="footer-menu__list-item">
+								<a href="project.html">PROJECT</a>
+							</li>
+							<li class="footer-menu__list-item">
+								<a href="contact.html">CONTACT</a>
+							</li>
+						</ul>
+						<div class="youtube">
+							<a href="#">
+								<img src="./images/footer-icon-youtube.png" alt="youtube">
+							</a>
+						</div>
+					</nav>
+				</div>
+			</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- フッター -->
+	<footer class="footer">
+		<small>&copy;2023 EETELLIA Co.,Ltd.</small>
+	</footer>
+</body>
+
+</html>
